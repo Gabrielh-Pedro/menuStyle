@@ -1,0 +1,11 @@
+<div class="calcular-media-container">
+    <h2>Calcular Média</h2>
+    <input [(ngModel)]="ac1" placeholder="AC1" type="number">
+    <input [(ngModel)]="ac2" placeholder="AC2" type="number">
+    <input [(ngModel)]="ag" placeholder="AG" type="number">
+    <input [(ngModel)]="af" placeholder="AF" type="number">
+    <button (click)="calcular()">Calcular</button>
+    <p>Média: {{ media }}</p>
+    <p>Status: {{ resultado }}</p>
+  </div>
+  

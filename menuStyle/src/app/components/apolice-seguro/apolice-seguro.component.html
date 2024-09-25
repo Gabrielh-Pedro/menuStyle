@@ -1,0 +1,33 @@
+<div class="apolice-container">
+  <h2>Calculadora de Apólice de Seguro</h2>
+
+  <div class="input-group">
+    <label for="nome" class="input-label">Nome do Segurado:</label>
+    <input id="nome" [(ngModel)]="nome" class="input-field" placeholder="Digite seu nome" />
+  </div>
+
+  <div class="select-group">
+    <label for="sexo" class="input-label">Sexo:</label>
+    <select id="sexo" [(ngModel)]="sexo" class="select-field">
+      <option value="">Selecione o Sexo</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="idade" class="input-label">Idade:</label>
+    <input id="idade" [(ngModel)]="idade" class="input-field" placeholder="Digite sua idade" type="number" />
+  </div>
+
+  <div class="input-group">
+    <label for="valorAutomovel" class="input-label">Valor do Automóvel:</label>
+    <input id="valorAutomovel" [(ngModel)]="valorAutomovel" class="input-field" placeholder="Valor em R$" type="number" />
+  </div>
+
+  <button class="calculate-button" (click)="calcularApolice()">Calcular Apólice</button>
+
+  <p class="result-text" *ngIf="valorApolice !== null">
+    Valor da Apólice: <strong>{{ valorApolice | currency:'BRL':true }}</strong>
+  </p>
+</div>
